@@ -6,6 +6,6 @@ clear all
 
 set obs 10000
 gen y = rnormal(10,2)
-gen x = runiform(-20,20))
+gen x = runiform(-20,20)
 gen z = _n
 
