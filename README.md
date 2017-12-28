@@ -9,5 +9,5 @@ More information at: This is a test to see about intentionally creating a confli
 
 https://medium.freecodecamp.org/5-github-tips-for-new-coders-2f312689ffd5
 
-## Concluding Footer [From desktop]
+## Concluding Footer - compete from desktop - [From desktop]
 
