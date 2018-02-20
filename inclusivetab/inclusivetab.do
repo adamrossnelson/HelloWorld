@@ -1,3 +1,6 @@
+// Prepared to illustrate question at:
+// https://www.statalist.org/forums/forum/general-stata-discussion/general/1430851-interesting-tabulation-question
+
 // Set workspace.
 set more off
 clear all
