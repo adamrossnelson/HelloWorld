@@ -25,10 +25,10 @@ replace plantyear = 2014 if _n > 300 & _n < 425
 shuffleit
 
 // Create fictional cultivation data.
-gen result = 0
-replace result = 1 if _n > 630
-replace result = 2 if _n > 870
-label define col_heads 0 "Not Grmntd" 1 "Grmntd" 2 "Fruited"
+gen result = 1
+replace result = 2 if _n > 630
+replace result = 3 if _n > 870
+label define col_heads 0 "Total Seeds" 1 "Not Grmntd" 2 "Grmntd" 3 "Fruited"
 label values result col_heads
 
 // Display a summary of the data with tabulate.
@@ -43,5 +43,22 @@ replace region = 1 if _n > 600
 label define ns 0 "South Fields" 1 "North Fields"
 label values region ns
 
-// Display a summary of the data with tablecol (ssc install tablecol)
-tablecol plantyear result region, row col
+// Check output.
+table plantyear result region, scolumn
+
+// Code added as a solution as proposed on StataList.org.
+preserve
+clonevar tabresult = result 
+
+// Expand data to include fruited in germinated column.
+expand 2 if tabresult == 3, generate(added1)
+replace tabresult = 2 if added1
+expand 2 if added1 == 0, generate(added2)
+replace tabresult = 0 if added2
+
+// Display a summary of the data with tablecol (ssc install tablecol).
+table plantyear tabresult region, scolumn
+restore
+
+
+
