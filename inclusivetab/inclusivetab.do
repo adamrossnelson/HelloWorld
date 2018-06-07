@@ -1,6 +1,9 @@
 // Prepared to illustrate question at:
 // https://www.statalist.org/forums/forum/general-stata-discussion/general/1430851-interesting-tabulation-question
 
+// JUNE 2018 UPDATE: Project moved to repo at:
+// https://github.com/adamrossnelson/cumtab
+
 // Set workspace.
 set more off
 clear all
