@@ -1,3 +1,6 @@
 This is a demonstration file.
 
 Demonstrate git.
+
+====================================
+This is a file footer.
