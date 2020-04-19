@@ -1,0 +1,6 @@
+This is a demonstration file.
+
+Demonstrate git.
+
+====================================
+This is a file footer; footers contain important information.
